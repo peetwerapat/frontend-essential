@@ -12,7 +12,9 @@ body {
 .milestone-container {
   display: flex;
   gap: 10px;
-  margin: 20px;
+  margin: 20px auto;
+  max-width: 1080px;
+  padding: 0 20px;
 }
 
 .top-milestone {
@@ -33,4 +35,16 @@ label {
 
 a:hover {
   color: red;
+}
+
+@media (max-width: 764px) {
+  .milestone-container {
+    flex-direction: column;
+    gap: 30px;
+  }
+
+  .top-milestone {
+    width: 100%;
+    box-sizing: border-box;
+  }
 }
