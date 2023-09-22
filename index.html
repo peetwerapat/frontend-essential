@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <link rel="stylesheet" href="style.css" />
+    <script src="script.js"></script>
   </head>
   <body>
     <h1>Hello, Peet</h1>
@@ -14,7 +15,7 @@
     <div class="milestone-container">
       <div class="top-milestone">
         <h2>Frontend Milestones!</h2>
-        <ul>
+        <ul id="frontend-milestone">
           <li class="important">Javascript</li>
           <li>HTML</li>
           <li>CSS</li>
@@ -24,7 +25,7 @@
       </div>
       <div class="top-milestone">
         <h2>Backend Milestones!</h2>
-        <ol>
+        <ol id="backend-milestone">
           <li>Node.js</li>
           <li>Express</li>
           <li>Database</li>
@@ -35,18 +36,17 @@
     </div>
 
     <div>
-      <p>Login</p>
+      <p>Form</p>
       <form>
-        <label for="Username">Username:</label>
-        <input type="text" id="username" required />
-
-        <label for="email">Email:</label>
-        <input type="email" id="email" required />
-
-        <label for="password">Password:</label>
-        <input type="password" id="password" required />
-
-        <button type="submit">Login</button>
+        <label for="frontend">Add Front-end Milestone:</label>
+        <input type="text" id="frontend" />
+        <button id="add-front">Submit</button>
+      </form>
+      <br />
+      <form>
+        <label for="backend">Add Back-end Milestone:</label>
+        <input type="text" id="backend" />
+        <button id="add-back">Submit</button>
       </form>
     </div>
   </body>

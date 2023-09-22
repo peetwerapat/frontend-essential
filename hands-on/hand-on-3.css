@@ -23,10 +23,6 @@ body {
   justify-content: space-between;
 }
 
-/* .margin-r {
-  margin-right: auto;
-} */
-
 .head0 {
   margin: 20px 0 0 50px;
   display: flex;
@@ -34,8 +30,6 @@ body {
 
 .name {
   color: green;
-  justify-content: space-between;
-  display: flex;
 }
 
 .menu1 {
@@ -184,6 +178,5 @@ body {
     display: block;
     width: 20px;
     height: 20px;
-    box-sizing: border-box;
   }
 }
