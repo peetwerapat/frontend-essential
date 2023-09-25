@@ -1,37 +1,52 @@
-const main = () => {
-  // * Frontend List
-  const frontendInput = document.getElementById("frontend");
+const main = async () => {
+  try {
+    const response = await fetch("https://api.minireg.thanayut.in.th/courses");
+    console.log(response);
 
-  const frontendButton = document.getElementById("add-front");
+    const rawData = await response.json();
 
-  const frontendMileStonesList = document.getElementById("frontend-milestone");
+    if (!response.ok) {
+      throw new Error(`code - ${response.status} - ${rawData.message}`);
+    }
 
-  frontendButton.addEventListener("click", (e) => {
-    e.preventDefault();
+    console.log(rawData);
+  } catch (err) {
+    console.log(err);
+  }
 
-    const newList = document.createElement("li");
+  // // * Frontend List
+  // const frontendInput = document.getElementById("frontend");
 
-    newList.textContent = frontendInput.value;
+  // const frontendButton = document.getElementById("add-front");
 
-    frontendMileStonesList.appendChild(newList);
-  });
+  // const frontendMileStonesList = document.getElementById("frontend-milestone");
 
-  // * Backend List
-  const backendInput = document.getElementById("backend");
+  // frontendButton.addEventListener("click", (e) => {
+  //   e.preventDefault();
 
-  const backendButton = document.getElementById("add-back");
+  //   const newList = document.createElement("li");
 
-  const backendMileStonesList = document.getElementById("backend-milestone");
+  //   newList.textContent = frontendInput.value;
 
-  backendButton.addEventListener("click", (e) => {
-    e.preventDefault();
+  //   frontendMileStonesList.appendChild(newList);
+  // });
 
-    const newList = document.createElement("li");
+  // // * Backend List
+  // const backendInput = document.getElementById("backend");
 
-    newList.textContent = backendInput.value;
+  // const backendButton = document.getElementById("add-back");
 
-    backendMileStonesList.appendChild(newList);
-  });
+  // const backendMileStonesList = document.getElementById("backend-milestone");
+
+  // backendButton.addEventListener("click", (e) => {
+  //   e.preventDefault();
+
+  //   const newList = document.createElement("li");
+
+  //   newList.textContent = backendInput.value;
+
+  //   backendMileStonesList.appendChild(newList);
+  // });
 };
 
 document.addEventListener("DOMContentLoaded", () => {

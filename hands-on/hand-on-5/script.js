@@ -3,7 +3,7 @@ const main = () => {
 
   const taskButton = document.getElementById("add-task");
 
-  const taksList = document.getElementById("all-task");
+  const taskList = document.getElementById("all-task");
 
   taskButton.addEventListener("click", (e) => {
     e.preventDefault();
@@ -17,7 +17,7 @@ const main = () => {
 
     newList.textContent = taskInput.value;
 
-    taksList.appendChild(newList);
+    taskList.appendChild(newList);
 
     taskInput.value = "";
   });
