@@ -12,15 +12,14 @@ const main = async () => {
     console.log(rawData);
     const newData = rawData.course;
     const subjectInput = document.getElementById("subject");
-    const subjectList = (document.getElementById("info").innerHTML =
-      "<h1>sub</h1>");
+    const subjectList = (document.getElementById("info").innerHTML = `
+    <h3>${course.courseNo} ${course.abbrName}</h3>
+    <h4>จำนวนหน่วยกิต</h4>`);
   } catch (err) {
     console.log(err);
   }
 };
 
-// document.addEventListener("DOMContentLoaded", () => {
-//   main();
-// });
-
-main();
+document.addEventListener("DOMContentLoaded", () => {
+  main();
+});
